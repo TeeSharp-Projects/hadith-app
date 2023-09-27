@@ -1,0 +1,35 @@
+"use strict";
+
+const express = require('express');
+const cors = require('cors');
+require('dotenv').config();
+// const mongoose = require("mongoose");
+
+
+const app = express();
+const PORT = process.env.PORT;
+
+const errorHandler = require('./handlers/500');
+const notFoundHandler = require('./handlers/404');
+const hadithRoutes = require('./routes/hadith');
+
+
+// Middlewares
+app.use(cors());
+
+
+app.use(errorHandler);
+app.use('*',notFoundHandler);
+app.use(hadithRoutes);
+
+app.get('/', (req, res) => {
+    res.send('You are good to go!')
+})
+
+
+
+app.listen(PORT,()=>console.log(`Listening on port ${PORT}`));
+
+
+
+// const hadithRoutes = require('./routes/hadith');
