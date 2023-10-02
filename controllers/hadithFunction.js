@@ -2,7 +2,7 @@
 
 const axios = require('axios');
 require("dotenv").config();
-const hadithModel = require('../models/scheModel');
+// const hadithModel = require('../models/scheModel');
 
 async function getAllHadithApiHandler(req,res){
     let allHadithApi = await axios.get(`https://hadithapi.com/public/api/hadiths?apiKey=${process.env.API_KEY}&paginate=100`);
@@ -13,7 +13,7 @@ async function getAllHadithApiHandler(req,res){
 
 
 
-module.exports ={
+module.exports = {
     getAllHadithApiHandler,
     // getAllHadithToDatabaseHandler,
     // addHadithInDatabaseHandler,
