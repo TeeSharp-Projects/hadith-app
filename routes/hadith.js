@@ -8,7 +8,7 @@ console.log(hadithHandlers);
 
 
 
-// hadithRouter.get('/hadithapi',hadithHandlers.getAllHadithApiHandler);
+hadithRouter.get('/hadithapi',hadithHandlers.getAllHadithApiHandler);
 // hadithRouter.get('/hadith',hadithHandlers.getAllHadithToDatabaseHandler);
 // hadithRouter.post('/hadith',hadithHandlers.addHadithInDatabaseHandler);
 // hadithRouter.delete('/hadith/:id',hadithHandlers.delHadithInDatabaseHandler);
