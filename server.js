@@ -18,9 +18,10 @@ const hadithRoutes = require('./routes/hadith');
 app.use(cors());
 
 
+
+app.use(hadithRoutes);
 app.use(errorHandler);
 app.use('*',notFoundHandler);
-app.use(hadithRoutes);
 
 // app.get('/', (req, res) => {
 //     res.send('You are good to go!')
