@@ -20,6 +20,7 @@ app.use(cors());
 
 
 app.use(hadithRoutes);
+//Always put your error & notFound handlers below routes.
 app.use(errorHandler);
 app.use('*',notFoundHandler);
 

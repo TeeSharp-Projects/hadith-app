@@ -8,7 +8,7 @@ const hadithSchema = new mongoose.Schema({
     hadithEnglish: String,
     hadithChapter: String,
     username:String
-    
+
 });
 
 const hadithModel = mongoose.model('hadith',hadithSchema);
