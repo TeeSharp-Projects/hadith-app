@@ -23,7 +23,7 @@ function seedData() {
     newHadith.save();
 }
 
-seedData();
+// seedData();
 
 
 module.exports = hadithModel;
