@@ -20,6 +20,24 @@ async function getAllHadithToDatabaseHandler(req,res){
 }
 
 
+async function addHadithInDatabaseHandler(req,res){
+    const {hadithName,hadithNarrator,hadithEnglish,hadithChapter,username} = req.body
+    console.log(req.body)
+    // const {hadithName,hadithNarrator,hadithEnglish,hadithChapter} = req.body
+    //   const {englishNarrator,hadithEnglish,bookName,chapterEnglish,email} = req.body
+      let newHadith = await hadithModel.create({
+        username,
+        hadithChapter,
+        hadithName,
+        hadithNarrator,
+        hadithEnglish,
+      });
+
+      res.send(newHadith);
+
+}
+
+
 module.exports = {
     getAllHadithApiHandler,
     getAllHadithToDatabaseHandler,

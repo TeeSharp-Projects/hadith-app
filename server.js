@@ -16,6 +16,7 @@ const hadithRoutes = require('./routes/hadith');
 
 // Middlewares
 app.use(cors());
+app.use(express.json());
 
 
 
