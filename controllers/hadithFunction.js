@@ -49,16 +49,7 @@ async function delHadithInDatabaseHandler(req,res){
 }
 
 
-async function delHadithInDatabaseHandler(req,res){
-    const id = req.params.id;
-    let username = req.query.username;
-    let deletedHadith = await hadithModel.findByIdAndDelete(id);
-    console.log(deletedHadith);
-    let allHadiths = await hadithModel.find({username});
-    // let allHadith = await hadithModel.find({});
-    res.send(allHadiths)
-    // res.send(`${deletedHadith.hadithName} has been deleted`);    
-}
+
 
 module.exports = {
     getAllHadithApiHandler,
